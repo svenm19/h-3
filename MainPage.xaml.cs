@@ -104,6 +104,48 @@ public partial class MainPage : ContentPage
     private void b_ausgeben_Clicked(object sender, EventArgs e)
     {
         ContainerBurgErstellbar(container);
+
+        for (int i = 0; i < g_Grid.Children.Count; i++)
+        {
+            if (g_Grid.Children[i] is Image)
+            {
+                g_Grid.Children.Remove((Image)g_Grid.Children[i]);
+                i--;
+            }
+        }
+        for (int i = 0; i < numberOfColumns; i++)
+        {
+            for (int j = 0; j < numberOfRows; j++)
+            {
+                if (container[i, j] != null)
+                {
+                    Image img = new Image();
+                    g_Grid.Children.Add(img);
+                    Grid.SetColumn(img, i);
+                    Grid.SetRow(img, (numberOfRows - 1) - j);
+                    if (container[i, j] is Büro)
+                    {
+                        img.Source = "/Images/B.png";
+                    }
+                    if (container[i, j] is Umkleide)
+                    {
+                        img.Source = "/Images/Umkleide.png";
+                    }
+                    if (container[i, j] is Toilette)
+                    {
+                        img.Source = "/Images/Toilette.png";
+                    }
+                    if (container[i, j] is Magazin)
+                    {
+                        img.Source = "/Images/Magazin.png";
+                    }
+                    if (container[i, j] is Pausenraum)
+                    {
+                        img.Source = "/Images/Pausenraum.png";
+                    }
+                }
+            }
+        }
     }
 
     private void rb_buero_CheckedChanged(object sender, CheckedChangedEventArgs e)
