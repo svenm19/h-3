@@ -15,12 +15,41 @@ public partial class MainPage : ContentPage
 
     private bool ContainerBurgErstellbar(Container[,] containers)
     {
-        return false;
+        e_fehlermeldung.Text = "";
+        bool empty = false;
+        for (int i = 0; i < numberOfColumns; i++)
+        {
+            for (int j = 0; j < numberOfRows; j++)
+            {
+                if (container[i, j] == null)
+                {
+                    empty = true;
+                }
+                if (container[i, j] != null && empty)
+                {
+                    e_fehlermeldung.Text = "Container schweben!";
+                    return false;
+                }
+            }
+            empty = false;
+        }
+        return true;
     }
 
     private void b_information_Clicked(object sender, EventArgs e)
     {
-
+        string containerInfo = "";
+        for (int i = 0; i < numberOfColumns; i++)
+        {
+            for (int j = 0; j < numberOfRows; j++)
+            {
+                if (container[i, j] != null)
+                {
+                    containerInfo += container[i, j].ToString() + "\n\n";
+                }
+            }
+        }
+        e_information.Text = containerInfo;
     }
 
     private void b_hinzufuegen_Clicked(object sender, EventArgs e)
@@ -44,13 +73,37 @@ public partial class MainPage : ContentPage
             Büro büro = new Büro(xValue, yValue, entry1);
             container[xValue, yValue] = büro;
         }
+        else if (rb_magazin.IsChecked)
+        {
+            Magazin magazin = new Magazin(xValue, yValue, entry1);
+            container[xValue, yValue] = magazin;
+        }
+        else if (rb_pausenraum.IsChecked)
+        {
+            Pausenraum pausenraum = new Pausenraum(xValue, yValue, entry1, entry2);
+            container[xValue, yValue] = pausenraum;
+        }
+        else if (rb_toilette.IsChecked)
+        {
+            Toilette toilette = new Toilette(xValue, yValue, entry1);
+            container[xValue, yValue] = toilette;
+        }
+        else if (rb_umkleide.IsChecked)
+        {
+            Umkleide umkleide = new Umkleide(xValue, yValue, entry1, entry2);
+            container[xValue, yValue] = umkleide;
+        }
+        else
+        {
+            e_fehlermeldung.Text = "Bitte wählen Sie einen Container aus!";
+        }
 
 
     }
 
     private void b_ausgeben_Clicked(object sender, EventArgs e)
     {
-
+        ContainerBurgErstellbar(container);
     }
 
     private void rb_buero_CheckedChanged(object sender, CheckedChangedEventArgs e)
