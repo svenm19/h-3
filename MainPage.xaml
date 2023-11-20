@@ -9,130 +9,113 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Label>Test</Label>
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="3*" />
+                            <RowDefinition Height="3*" />
+                            <RowDefinition Height="3*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="5*" />
+                            <ColumnDefinition Width="4*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="1" Grid.ColumnSpan="2" Text="Containerart wählen:" />
+                        <RadioButton x:Name="rb_buero" GroupName="ContainerGroup" Content="Büro" Grid.Row="2" Grid.Column="1" CheckedChanged="rb_buero_CheckedChanged"/>
+                        <RadioButton x:Name="rb_umkleide" GroupName="ContainerGroup" Content="Büro" Grid.Row="3" Grid.Column="1" CheckedChanged="rb_umkleide_CheckedChanged" />
+                        <RadioButton x:Name="rb_toilette" GroupName="ContainerGroup" Content="Büro" Grid.Row="4" Grid.Column="1" CheckedChanged="rb_toilette_CheckedChanged"/>
+                        <RadioButton x:Name="rb_magazin" GroupName="ContainerGroup" Content="Büro" Grid.Row="5" Grid.Column="1" CheckedChanged="rb_magazin_CheckedChanged" />
+                        <RadioButton x:Name="rb_pausenraum" GroupName="ContainerGroup" Content="Pausenraum" Grid.Row="6" Grid.Column="1" CheckedChanged="rb_pausenraum_CheckedChanged"/>
+                        <Label Grid.Row="8" Grid.ColumnSpan="2" Text="Koordinaten wählen:" />
+                        <Label Grid.Row="9" Text="X:" />
+                        <Entry x:Name="e_x" Grid.Row="9" Grid.Column="1" />
+                        <Label Grid.Row="9" Grid.Column="2" Text="Intervall [0,4]" />
+                        <Label Grid.Row="10" Text="Y:" />
+                        <Entry x:Name="e_y" Grid.Row="10" Grid.Column="1" />
+                        <Label Grid.Row="10" Grid.Column="2" Text="Intervall [0,2]" />
+                        <Label x:Name="l_1" Grid.Row="12" Grid.ColumnSpan="2" IsVisible="False" />
+                        <Entry x:Name="e_1" Grid.Row="13" Grid.Column="1" IsVisible="False" IsEnabled="False"/>
+                        <Label x:Name="l_2" Grid.Row="15" Grid.ColumnSpan="2" IsVisible="False" />
+                        <Entry x:Name="e_2" Grid.Row="16" Grid.Column="1" IsVisible="False" IsEnabled="False"/>
+                        <Button x:Name="b_information" Text="Information ausgeben" Clicked="b_information_Clicked" Grid.Row="20" Grid.Column="1" />
+                        <Button x:Name="b_hinzufuegen" Text="Container zur Burg hinzufügen" Clicked="b_hinzufuegen_Clicked" Grid.Row="21" Grid.Column="1" />
+                        <Button x:Name="b_ausgeben" Text="Containerburg ausgeben" Clicked="b_ausgeben_Clicked" Grid.Row="22" Grid.Column="1" />
+                    </Grid>
+                </StackLayout>
+            </Frame>
 
-            <!--<Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="3*" />
-                </Grid.ColumnDefinitions>-->
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="27*" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Containerinformationen:" Grid.Row="1" />
+                        <ScrollView Grid.Row="2">
+                            <Editor x:Name="e_information" />
+                        </ScrollView>
+                    </Grid>
+                </StackLayout>
+            </Frame>
 
-                <Frame Grid.RowSpan="2">
-                    <StackLayout>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="3*" />
-                                <RowDefinition Height="3*" />
-                                <RowDefinition Height="3*" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="5*" />
-                                <ColumnDefinition Width="4*" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Row="1" Grid.ColumnSpan="2" Text="Containerart wählen:" />
-                            <RadioButton x:Name="rb_buero" GroupName="ContainerGroup" Content="Büro" Grid.Row="2" Grid.Column="1" CheckedChanged="rb_buero_CheckedChanged"/>
-                            <RadioButton x:Name="rb_umkleide" GroupName="ContainerGroup" Content="Büro" Grid.Row="3" Grid.Column="1" CheckedChanged="rb_umkleide_CheckedChanged" />
-                            <RadioButton x:Name="rb_toilette" GroupName="ContainerGroup" Content="Büro" Grid.Row="4" Grid.Column="1" CheckedChanged="rb_toilette_CheckedChanged"/>
-                            <RadioButton x:Name="rb_magazin" GroupName="ContainerGroup" Content="Büro" Grid.Row="5" Grid.Column="1" CheckedChanged="rb_magazin_CheckedChanged" />
-                            <RadioButton x:Name="rb_pausenraum" GroupName="ContainerGroup" Content="Pausenraum" Grid.Row="6" Grid.Column="1" CheckedChanged="rb_pausenraum_CheckedChanged"/>
-                            <Label Grid.Row="8" Grid.ColumnSpan="2" Text="Koordinaten wählen:" />
-                            <Label Grid.Row="9" Text="X:" />
-                            <Entry x:Name="e_x" Grid.Row="9" Grid.Column="1" />
-                            <Label Grid.Row="9" Grid.Column="2" Text="Intervall [0,4]" />
-                            <Label Grid.Row="10" Text="Y:" />
-                            <Entry x:Name="e_y" Grid.Row="10" Grid.Column="1" />
-                            <Label Grid.Row="10" Grid.Column="2" Text="Intervall [0,2]" />
-                            <Label x:Name="l_1" Grid.Row="12" Grid.ColumnSpan="2" IsVisible="False" />
-                            <Entry x:Name="e_1" Grid.Row="13" Grid.Column="1" IsVisible="False" IsEnabled="False"/>
-                            <Label x:Name="l_2" Grid.Row="15" Grid.ColumnSpan="2" IsVisible="False" />
-                            <Entry x:Name="e_2" Grid.Row="16" Grid.Column="1" IsVisible="False" IsEnabled="False"/>
-                            <Button x:Name="b_information" Text="Information ausgeben" Clicked="b_information_Clicked" Grid.Row="20" Grid.Column="1" />
-                            <Button x:Name="b_hinzufuegen" Text="Container zur Burg hinzufügen" Clicked="b_hinzufuegen_Clicked" Grid.Row="21" Grid.Column="1" />
-                            <Button x:Name="b_ausgeben" Text="Containerburg ausgeben" Clicked="b_ausgeben_Clicked" Grid.Row="22" Grid.Column="1" />
-                        </Grid>
-                    </StackLayout>
-                </Frame>
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="14*"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Letzte Fehlermeldung:" Grid.Row="1" />
+                        <ScrollView Grid.Row="2">
+                            <Editor x:Name="e_fehlermeldung" />
+                        </ScrollView>
+                    </Grid>
+                </StackLayout>
+            </Frame>
 
-                <!--<Frame Grid.Column="1" Grid.RowSpan="2">
-                    <StackLayout>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="27*" />
-                            </Grid.RowDefinitions>
-                            <Label Text="Containerinformationen:" Grid.Row="1" />
-                            <ScrollView Grid.Row="2">
-                                <Editor x:Name="e_information" />
-                            </ScrollView>
-                        </Grid>
-                    </StackLayout>
-                </Frame>
-
-                <Frame Grid.Column="2">
-                    <StackLayout>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="14*"/>
-                            </Grid.RowDefinitions>
-                            <Label Text="Letzte Fehlermeldung:" Grid.Row="1" />
-                            <ScrollView Grid.Row="2">
-                                <Editor x:Name="e_fehlermeldung" />
-                            </ScrollView>
-                        </Grid>
-                    </StackLayout>
-                </Frame>
-
-                <Frame Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="2" BorderColor="Aqua">
-                    <StackLayout>
-                        <Grid IsVisible="True" x:Name = "g_Grid"> 
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="1*" />
-                            </Grid.ColumnDefinitions>
-                        </Grid>
-                    </StackLayout>
-                </Frame>-->
-                
-            <!--</Grid>-->
-
+            <Frame BorderColor="Aqua">
+                <StackLayout>
+                    <Grid IsVisible="True" x:Name = "g_Grid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </StackLayout>
+            </Frame>
         </VerticalStackLayout>
     </ScrollView>
 
