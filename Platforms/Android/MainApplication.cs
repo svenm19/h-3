@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace Hausuebung_03;
+namespace Containertool;
 
 [Application]
 public class MainApplication : MauiApplication

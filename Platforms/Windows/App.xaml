@@ -1,8 +1,8 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="Hausuebung_03.WinUI.App"
+    x:Class="Containertool.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:Hausuebung_03.WinUI">
+    xmlns:local="using:Containertool.WinUI">
 
 </maui:MauiWinUIApplication>

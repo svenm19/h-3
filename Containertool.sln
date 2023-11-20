@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hausuebung_03", "Hausuebung_03.csproj", "{61E101CA-7BF7-4053-810B-B567749F46AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Containertool", "Containertool.csproj", "{61E101CA-7BF7-4053-810B-B567749F46AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

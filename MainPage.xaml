@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Hausuebung_03.MainPage">
+             x:Class="Containertool.MainPage">
 
     <ScrollView>
         <VerticalStackLayout
@@ -9,7 +9,9 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Grid>
+            <Label>Test</Label>
+
+            <!--<Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="1*" />
@@ -19,7 +21,7 @@
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="3*" />
-                </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>-->
 
                 <Frame Grid.RowSpan="2">
                     <StackLayout>
@@ -78,7 +80,7 @@
                     </StackLayout>
                 </Frame>
 
-                <Frame Grid.Column="1" Grid.RowSpan="2">
+                <!--<Frame Grid.Column="1" Grid.RowSpan="2">
                     <StackLayout>
                         <Grid>
                             <Grid.RowDefinitions>
@@ -127,9 +129,9 @@
                             </Grid.ColumnDefinitions>
                         </Grid>
                     </StackLayout>
-                </Frame>
+                </Frame>-->
                 
-            </Grid>
+            <!--</Grid>-->
 
         </VerticalStackLayout>
     </ScrollView>
