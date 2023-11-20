@@ -10,7 +10,7 @@ TODOS: GUI / Musterlösung / Erklärvideo überarbeiten / Aufgabenstellung entsp
 To run and compile the code you need at least Visual Studio 2022 with the .NET 7 MAUI package installed.
 
 ## Authors and acknowledgment
-tba
+Leonard Katzenmeier
 
 ## License
 No License, free to use for educational purpose.
