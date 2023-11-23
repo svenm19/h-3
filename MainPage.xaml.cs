@@ -15,7 +15,7 @@ public partial class MainPage : ContentPage
 
     private bool ContainerBurgErstellbar(Container[,] containers)
     {
-        e_fehlermeldung.Text = "";
+        l_fehlermeldung.Text = "";
         bool empty = false;
         for (int i = 0; i < numberOfColumns; i++)
         {
@@ -27,7 +27,7 @@ public partial class MainPage : ContentPage
                 }
                 if (container[i, j] != null && empty)
                 {
-                    e_fehlermeldung.Text = "Container schweben!";
+                    l_fehlermeldung.Text = "Container schweben!";
                     return false;
                 }
             }
@@ -95,7 +95,7 @@ public partial class MainPage : ContentPage
         }
         else
         {
-            e_fehlermeldung.Text = "Bitte wählen Sie einen Container aus!";
+            l_fehlermeldung.Text = "Bitte wählen Sie einen Container aus!";
         }
 
 

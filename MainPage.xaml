@@ -70,14 +70,14 @@
             <Frame VerticalOptions="FillAndExpand">
                 <StackLayout>
                     <Label Text="Containerinformationen:" Grid.Row="1" />
-                    <Label x:Name="e_information" Grid.Row="2"/>
+                    <Label x:Name="l_information" Grid.Row="2"/>
                 </StackLayout>
             </Frame>
 
             <Frame VerticalOptions="FillAndExpand">
                 <StackLayout>
                     <Label Text="Letzte Fehlermeldung:" Grid.Row="1" />
-                    <Label x:Name="e_fehlermeldung" />
+                    <Label x:Name="l_fehlermeldung" />
                 </StackLayout>
             </Frame>
 
