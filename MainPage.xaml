@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Containertool.MainPage">
+             x:Class="Containertool.MainPage"
+             x:Name="cp_contentpage">
 
     <ScrollView>
         <VerticalStackLayout
@@ -39,14 +40,14 @@
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="5*" />
-                            <ColumnDefinition Width="4*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
                         <Label Grid.Row="1" Grid.ColumnSpan="2" Text="Containerart wählen:" />
                         <RadioButton x:Name="rb_buero" GroupName="ContainerGroup" Content="Büro" Grid.Row="2" Grid.Column="1" CheckedChanged="rb_buero_CheckedChanged"/>
-                        <RadioButton x:Name="rb_umkleide" GroupName="ContainerGroup" Content="Büro" Grid.Row="3" Grid.Column="1" CheckedChanged="rb_umkleide_CheckedChanged" />
-                        <RadioButton x:Name="rb_toilette" GroupName="ContainerGroup" Content="Büro" Grid.Row="4" Grid.Column="1" CheckedChanged="rb_toilette_CheckedChanged"/>
-                        <RadioButton x:Name="rb_magazin" GroupName="ContainerGroup" Content="Büro" Grid.Row="5" Grid.Column="1" CheckedChanged="rb_magazin_CheckedChanged" />
+                        <RadioButton x:Name="rb_umkleide" GroupName="ContainerGroup" Content="Umkleide" Grid.Row="3" Grid.Column="1" CheckedChanged="rb_umkleide_CheckedChanged" />
+                        <RadioButton x:Name="rb_toilette" GroupName="ContainerGroup" Content="Toilettte" Grid.Row="4" Grid.Column="1" CheckedChanged="rb_toilette_CheckedChanged"/>
+                        <RadioButton x:Name="rb_magazin" GroupName="ContainerGroup" Content="Magazin" Grid.Row="5" Grid.Column="1" CheckedChanged="rb_magazin_CheckedChanged" />
                         <RadioButton x:Name="rb_pausenraum" GroupName="ContainerGroup" Content="Pausenraum" Grid.Row="6" Grid.Column="1" CheckedChanged="rb_pausenraum_CheckedChanged"/>
                         <Label Grid.Row="8" Grid.ColumnSpan="2" Text="Koordinaten wählen:" />
                         <Label Grid.Row="9" Text="X:" />
@@ -66,55 +67,35 @@
                 </StackLayout>
             </Frame>
 
-            <Frame>
+            <Frame VerticalOptions="FillAndExpand">
                 <StackLayout>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="1*" />
-                            <RowDefinition Height="1*" />
-                            <RowDefinition Height="27*" />
-                        </Grid.RowDefinitions>
-                        <Label Text="Containerinformationen:" Grid.Row="1" />
-                        <ScrollView Grid.Row="2">
-                            <Editor x:Name="e_information" />
-                        </ScrollView>
-                    </Grid>
+                    <Label Text="Containerinformationen:" Grid.Row="1" />
+                    <Label x:Name="e_information" Grid.Row="2"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label Text="Letzte Fehlermeldung:" Grid.Row="1" />
+                    <Label x:Name="e_fehlermeldung" />
                 </StackLayout>
             </Frame>
 
             <Frame>
-                <StackLayout>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="1*" />
-                            <RowDefinition Height="1*" />
-                            <RowDefinition Height="14*"/>
-                        </Grid.RowDefinitions>
-                        <Label Text="Letzte Fehlermeldung:" Grid.Row="1" />
-                        <ScrollView Grid.Row="2">
-                            <Editor x:Name="e_fehlermeldung" />
-                        </ScrollView>
-                    </Grid>
-                </StackLayout>
-            </Frame>
-
-            <Frame BorderColor="Aqua">
-                <StackLayout>
-                    <Grid IsVisible="True" x:Name = "g_Grid">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="1*" />
-                            <RowDefinition Height="1*" />
-                            <RowDefinition Height="1*" />
-                            <RowDefinition Height="1*" />
-                            <RowDefinition Height="1*" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="1*" />
-                        </Grid.ColumnDefinitions>
-                    </Grid>
-                </StackLayout>
+                <Grid x:Name = "g_Grid" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
             </Frame>
         </VerticalStackLayout>
     </ScrollView>

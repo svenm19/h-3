@@ -39,8 +39,8 @@ namespace Containertool.Klassen
 
         public override string ToString()
         {
-            return $"Container an X = {xValue} und Y = {yValue}" +
-                $"Volumen des Containers : {BerechneVolumen()}";
+            return $"Container an X = {xValue} und Y = {yValue} \n" +
+                $"Volumen des Containers : {BerechneVolumen()} \n";
         }
     }
 }

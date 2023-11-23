@@ -19,10 +19,10 @@ namespace Containertool.Klassen
 
         public override string ToString()
         {
-            return $"Container an X = {xValue} und Y = {yValue}" +
-                $"Der Container ist ein Toilette-Container." +
-                $"Dieser Container enthält {numberOfComputers} Computer." +
-                $"Volumen des Containers : {BerechneVolumen()}";
+            return $"Container an X = {xValue} und Y = {yValue} \n" +
+                $"Der Container ist ein Toilette-Container. \n" +
+                $"Dieser Container enthält {numberOfComputers} Computer. \n" +
+                $"Volumen des Containers : {BerechneVolumen()} \n";
         }
     }
 }
