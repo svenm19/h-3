@@ -49,7 +49,7 @@ public partial class MainPage : ContentPage
                 }
             }
         }
-        e_information.Text = containerInfo;
+        l_information.Text = containerInfo;
     }
 
     private void b_hinzufuegen_Clicked(object sender, EventArgs e)
